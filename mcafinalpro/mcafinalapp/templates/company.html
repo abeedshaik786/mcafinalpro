@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+<section class="col-sm-5 m-auto ">
+    <form action="{% url 'mcafinalpro:CompanyRequrment' %}" method="POST" >
+        {% csrf_token %}
+    <div>
+        <div class="p-3">
+            {{forms.errors.CompanyName}}
+            <div class="row">
+            <div class='col-sm-3'>
+            {{forms.CompanyName.label_tag}}
+            </div>
+            <div class='col-sm-9'>
+            {{forms.CompanyName}}
+            </div>
+            </div>
+        </div>
+        <div class="p-3">
+            {{forms.errors.Description}}
+            <div class="row">
+            <div class='col-sm-2'>
+            {{forms.Description.label_tag}}
+            </div>
+            <div class='col-sm-10'>
+            {{forms.Description}}
+            </div>
+        </div>
+        <div class="p-3">
+                {{forms.errors.JobDescription}}
+                <div class="row">
+                <div class='col-sm-3'>
+                {{forms.JobDescription.label_tag}}
+                </div>
+                <div class='col-sm-9'>
+                {{forms.JobDescription}}
+                </div>
+            </div>
+        </div>
+        <div class="p-3">
+            {{forms.errors.InterviewDate}}
+            <div class="row">
+            <div class='col-sm-3'>
+            {{forms.InterviewDate.label_tag}}
+            </div>
+            <div class='col-sm-9'>
+            {{forms.InterviewDate}}
+            </div>
+        </div>
+        </div>
+        <div class="p-3">
+            {{forms.errors.Skills}}
+            <div class="row">
+            <div class='col-sm-1'>
+            {{forms.Skills.label_tag}}
+        </div>
+        <div class='col-sm-11'>
+            {{forms.Skills}}
+            </div>
+        </div>
+        </div>
+        <div class="p-3">
+            {{forms.errors.HrNumber}}
+            <div class="row">
+                    <div class='col-sm-2'>
+            {{ forms.HrNumber.label_tag }}
+        </div>
+        <div class='col-sm-10'>
+             {{forms.HrNumber}}
+         </div>
+        </div>
+    </div>
+    <div  class="p-3" style="margin:auto">
+            <input type="submit" value="POST REQUIRMENT">
+    </div>
+</section>
+</form>
+</body>
+{% endblock %}

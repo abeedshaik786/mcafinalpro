@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<a href="{% url 'mcafinalpro:CompanyRequrment' %}">Company</a>
+<a href="{% url 'mcafinalpro:rigistration' %}">hgdhwj</a>
+<br>              
+<section class="container col-sm-4 ">
+  <!-- Material form register -->
+<div class="card m-5">
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" method="POST" action="{% url 'mcafinalapp:Login' %}">
+             {% csrf_token %}
+            <div class="md-form">
+                <input type="text" name="username" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
+                <label for="materialRegisterFormPassword">UserName</label>
+                <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                  
+                </small>
+            </div>
+            <!-- Password -->
+            <div class="md-form">
+                <input type="password" name="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
+                <label for="materialRegisterFormPassword">Password</label>
+                <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                    At least 8 characters and 1 digit
+                </small>
+            </div>
+
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+
+            <!-- Social register -->
+            <a href="{% url 'mcafinalpro:rigistration' %}">Sign Up</a>
+
+            <p>or sign up with:</p>
+
+            <a type="button" class="btn-floating btn-fb btn-sm">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a type="button" class="btn-floating btn-tw btn-sm">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a type="button" class="btn-floating btn-li btn-sm">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a type="button" class="btn-floating btn-git btn-sm">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <hr>
+
+            <!-- Terms of service -->
+        </form>
+        <!-- Form -->
+
+    </div>
+
+</div>
+<!-- Material form register -->
+  </section>     
+  {% endblock %}

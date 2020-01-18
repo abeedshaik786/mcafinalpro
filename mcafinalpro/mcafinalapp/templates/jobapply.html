@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form class="col-sm-4 m-auto">
+    {{form}}
+    <a href="{% url 'mcafinalpro:jobapply' %}"><button type="button"  class="btn btn-outline-primary waves-effect m-2">Apply</button></a>
+</form>
+
+{% endblock %}
