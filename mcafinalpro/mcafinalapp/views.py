@@ -73,5 +73,6 @@ def jobapply(request):
       # # student_jobs = Company.objects.filter(id=comdata_id )
       # # print(student_jobs)
       # return render(request,'jobapply.html',{'form':form,})
+      # adding code to git
 
 
